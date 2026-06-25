@@ -1,0 +1,39 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ophis-fi",
+  "owner": {
+    "name": "Ophis",
+    "email": "contact@ophis.fi",
+    "url": "https://ophis.fi"
+  },
+  "metadata": {
+    "version": "0.1.0",
+    "description": "Official Ophis plugins for Claude Code. Swap tokens onchain via the Ophis MCP server: MEV-protected, gasless, keyless."
+  },
+  "plugins": [
+    {
+      "name": "ophis",
+      "displayName": "Ophis",
+      "description": "Swap tokens onchain via Ophis: an intent-based DEX (a CoW Protocol deployment) that is MEV-protected, gasless for the trader, keyless, and rebate-eligible. Bundles the Ophis MCP server and the ophis-swap workflow skill.",
+      "version": "0.1.0",
+      "source": "./plugins/ophis",
+      "author": {
+        "name": "Ophis",
+        "email": "contact@ophis.fi",
+        "url": "https://ophis.fi"
+      },
+      "homepage": "https://ophis.fi",
+      "repository": "https://github.com/ophis-fi/skills",
+      "license": "MIT",
+      "category": "development",
+      "keywords": [
+        "defi",
+        "swap",
+        "dex",
+        "mev-protection",
+        "onchain",
+        "agent"
+      ]
+    }
+  ]
+}

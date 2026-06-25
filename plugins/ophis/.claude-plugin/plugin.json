@@ -1,0 +1,24 @@
+{
+  "name": "ophis",
+  "description": "Swap tokens onchain via Ophis: an intent-based DEX (a CoW Protocol deployment) that is MEV-protected, gasless for the trader, keyless, and rebate-eligible. Bundles the Ophis MCP server (quote, build, submit, balances, portfolio, prices, gas, fee-rebate tier) and the ophis-swap workflow skill.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ophis",
+    "email": "contact@ophis.fi",
+    "url": "https://ophis.fi"
+  },
+  "homepage": "https://ophis.fi",
+  "repository": "https://github.com/ophis-fi/skills",
+  "license": "MIT",
+  "keywords": [
+    "defi",
+    "swap",
+    "dex",
+    "cow-protocol",
+    "mev-protection",
+    "onchain",
+    "agent",
+    "web3",
+    "ethereum"
+  ]
+}
