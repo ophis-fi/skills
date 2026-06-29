@@ -71,9 +71,16 @@ Add to `~/.codex/config.toml`:
 url = "https://mcp.ophis.fi/mcp"
 ```
 
-### Other MCP clients (Cline, Roo Code, Windsurf)
+### Other MCP clients (Cline, Roo Code, and more)
 
-Use the standard `mcpServers` map:
+Add Ophis as a remote Streamable HTTP MCP server (`https://mcp.ophis.fi/mcp`, no API key) in your client's `mcpServers` settings. The transport `type` spelling differs by client, so use the one your client documents:
+
+- Cline: `"type": "streamableHttp"`
+- Roo Code: `"type": "streamable-http"`
+- Cursor: omit `type` (just `url`, shown above)
+- VS Code and Copilot: `"type": "http"` (shown above)
+
+Example for Cline:
 
 ```json
 {

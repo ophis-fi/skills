@@ -77,9 +77,16 @@ Manual, `.vscode/mcp.json` (top-level `servers` key):
 url = "https://mcp.ophis.fi/mcp"
 ```
 
-### Cline, Roo Code, Windsurf, and other MCP clients
+### Cline, Roo Code, and other MCP clients
 
-Standard `mcpServers` map with the Streamable HTTP transport:
+Add Ophis as a remote Streamable HTTP MCP server (`https://mcp.ophis.fi/mcp`, no API key) in the client's `mcpServers` settings. The transport `type` spelling differs by client, so use the one the client documents:
+
+- Cline: `"type": "streamableHttp"`
+- Roo Code: `"type": "streamable-http"`
+- Cursor: omit `type` (just `url`)
+- VS Code and Copilot: `"type": "http"`
+
+Example for Cline:
 
 ```json
 {

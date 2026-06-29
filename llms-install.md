@@ -36,7 +36,7 @@ Merge this into the `mcpServers` object (do not overwrite existing servers):
 }
 ```
 
-Keep `autoApprove` empty. `submit_order` places a real, executable onchain trade and must always require explicit user approval.
+Keep `autoApprove` empty. `submit_order` places a real, executable onchain trade and must always require explicit user approval. The `type` value above is Cline's spelling; for Roo Code use `streamable-http` (hyphenated), and for Cursor omit `type`.
 
 ### 2. If the client cannot open a remote HTTP server (stdio only)
 
