@@ -43,6 +43,44 @@ The server enforces real guarantees, so the worst outcomes are not reachable thr
 9. Submit. Call `submit_order` with the exact `order` object, the `signature`, `from` (the owner), and the exact `fullAppData` string from step 6. It returns the order UID.
 10. Report. Give the user the order UID. The order is now a live commitment that a solver can fill at the signed limit any time until `validTo`. The MCP has no cancel tool, so a submitted order stands until it fills or expires.
 
+## Worked example
+
+A market-style sell, "swap 100 USDC for WETH on Base". The argument names and response shapes below follow `reference.md`; the addresses are placeholders, so always take the real ones from `resolve_token`.
+
+```text
+parse_intent(text="swap 100 USDC for WETH on Base")
+  -> { intent: "swap", entities: [
+        { type: "amount", value: "100" }, { type: "sellToken", value: "USDC" },
+        { type: "buyToken", value: "WETH" }, { type: "chain", value: "Base" } ] }
+# Read the entity values, then map the symbols and chain name to ids yourself.
+
+list_chains()                                # confirm Base, chainId 8453, is `tradeable`
+resolve_token(chainId=8453, symbol="USDC")   # -> canonical.address = <USDC>, decimals = 6
+resolve_token(chainId=8453, symbol="WETH")   # -> canonical.address = <WETH>, decimals = 18
+
+# Amounts are atoms = whole units x 10^decimals:  100 USDC (6 dp) -> "100000000"
+
+get_quote(chainId=8453, sellToken=<USDC>, buyToken=<WETH>, kind="sell",
+          amount="100000000", from="<your wallet>")
+  -> { quote: { sellAmount, buyAmount, feeAmount, validTo } }
+
+# Minimum received = quote.buyAmount adjusted down for slippage (here 75 bps).
+build_order(chainId=8453, owner="<your wallet>", sellToken=<USDC>, buyToken=<WETH>,
+            kind="sell", sellAmount="100000000", buyAmount="<min from quote>",
+            slippageBips=75)
+  -> { order, signing: { domain, types, primaryType: "Order" }, fullAppData, appDataHash, partnerFee }
+
+# Confirm with the user before signing (hard rule 5): the buy token ADDRESS, the
+# minimum received (order.buyAmount at WETH's 18 decimals), the slippage, the fee (partnerFee; order.feeAmount is 0),
+# and the validity window. Only on explicit approval, sign the `order` object as
+# EIP-712 typed data using `signing` (domain + types + primaryType); the receiver
+# is pinned to owner. If the user does not approve, stop.
+
+submit_order(chainId=8453, order=order, signature="0x...", from="<your wallet>",
+             fullAppData=fullAppData)
+  -> orderUID
+```
+
 ## Reading data (no signing, safe to call freely)
 - `get_balances` and `get_portfolio`: native and ERC-20 balances on one chain or across chains. Use these for the token readback in hard rule 1.
 - `get_gas`: current gas price. Ophis trades are gasless for the trader, so this is informational.
