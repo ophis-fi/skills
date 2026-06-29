@@ -43,6 +43,36 @@ The server enforces real guarantees, so the worst outcomes are not reachable thr
 9. Submit. Call `submit_order` with the exact `order` object, the `signature`, `from` (the owner), and the exact `fullAppData` string from step 6. It returns the order UID.
 10. Report. Give the user the order UID. The order is now a live commitment that a solver can fill at the signed limit any time until `validTo`. The MCP has no cancel tool, so a submitted order stands until it fills or expires.
 
+## Worked example
+
+A market-style sell, "swap 100 USDC for WETH on Base" (chainId 8453). The addresses below are placeholders; always take the real ones from `resolve_token`.
+
+```text
+parse_intent("swap 100 USDC for WETH on Base")
+  -> { sellToken: "USDC", buyToken: "WETH", amount: "100", chain: "Base" }
+
+list_chains()                 # confirm 8453 is in `tradeable`
+resolve_token(8453, "USDC")   # -> canonical.address = <USDC>, canonical.decimals = 6
+resolve_token(8453, "WETH")   # -> canonical.address = <WETH>, canonical.decimals = 18
+
+# Amounts are atoms = whole units x 10^decimals:
+#   100 USDC (6 decimals) -> 100000000
+expected_surplus(...)         # optional: beatBps vs a public aggregator
+
+get_quote(kind="sell", sellToken=<USDC>, buyToken=<WETH>,
+          sellAmount="100000000", from="<your wallet>")
+
+build_order(owner="<your wallet>", sellToken=<USDC>, buyToken=<WETH>,
+            kind="sell", sellAmount="100000000", slippageBips=75)
+  -> { order, signing, fullAppData, appDataHash, partnerFee }
+
+# Sanity-check order.buyAmount with WETH's 18 decimals, then have the user
+# confirm the buy token ADDRESS. On approval, sign `signing` (EIP-712) locally.
+
+submit_order(order, signature="0x...", from="<your wallet>", fullAppData)
+  -> orderUID
+```
+
 ## Reading data (no signing, safe to call freely)
 - `get_balances` and `get_portfolio`: native and ERC-20 balances on one chain or across chains. Use these for the token readback in hard rule 1.
 - `get_gas`: current gas price. Ophis trades are gasless for the trader, so this is informational.
