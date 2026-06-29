@@ -26,7 +26,7 @@ claude mcp add --transport http ophis https://mcp.ophis.fi/mcp
 
 ## Use the Ophis MCP server in other agents
 
-The Ophis MCP server is remote, HTTP, and keyless, so the same endpoint works in any MCP client. The `ophis-swap` skill is specific to Claude Code; the 12 tools are universal.
+The Ophis MCP server is remote, HTTP, and keyless, so the same endpoint works in any MCP client. The `ophis-swap` skill is specific to Claude Code; the MCP tools are universal.
 
 ### Cursor
 
@@ -79,7 +79,7 @@ Use the standard `mcpServers` map:
 {
   "mcpServers": {
     "ophis": {
-      "type": "http",
+      "type": "streamableHttp",
       "url": "https://mcp.ophis.fi/mcp"
     }
   }

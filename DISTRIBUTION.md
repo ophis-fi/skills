@@ -79,13 +79,13 @@ url = "https://mcp.ophis.fi/mcp"
 
 ### Cline, Roo Code, Windsurf, and other MCP clients
 
-Standard `mcpServers` map with HTTP transport:
+Standard `mcpServers` map with the Streamable HTTP transport:
 
 ```json
 {
   "mcpServers": {
     "ophis": {
-      "type": "http",
+      "type": "streamableHttp",
       "url": "https://mcp.ophis.fi/mcp"
     }
   }

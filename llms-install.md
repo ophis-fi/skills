@@ -27,7 +27,7 @@ Merge this into the `mcpServers` object (do not overwrite existing servers):
 {
   "mcpServers": {
     "ophis": {
-      "type": "http",
+      "type": "streamableHttp",
       "url": "https://mcp.ophis.fi/mcp",
       "disabled": false,
       "autoApprove": []
