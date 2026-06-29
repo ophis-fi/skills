@@ -17,7 +17,7 @@ To actually place a trade later, the agent needs an EVM wallet it controls (an a
 Add the following entry to the host's MCP settings file. Use the path for your client:
 
 - Cline (VS Code extension): `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json`
-- Roo Code (VS Code extension): `~/Library/Application Support/Code/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json`
+- Roo Code (VS Code extension): `~/Library/Application Support/Code/User/globalStorage/rooveterinaryinc.roo-cline/settings/mcp_settings.json`
 - Claude Desktop: `~/Library/Application Support/Claude/claude_desktop_config.json` (use the stdio bridge in step 2)
 - Cursor: `~/.cursor/mcp.json` or project `.cursor/mcp.json`
 

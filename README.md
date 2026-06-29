@@ -47,7 +47,7 @@ Or add to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (per project):
 ### VS Code / GitHub Copilot
 
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=ophis&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fmcp.ophis.fi%2Fmcp%22%7D)
-[![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install_Server-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=ophis&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fmcp.ophis.fi%2Fmcp%22%7D)
+[![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install_Server-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=ophis&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fmcp.ophis.fi%2Fmcp%22%7D&quality=insiders)
 
 Or add to `.vscode/mcp.json` (note the top-level `servers` key):
 
@@ -71,7 +71,7 @@ Add to `~/.codex/config.toml`:
 url = "https://mcp.ophis.fi/mcp"
 ```
 
-### Other MCP clients (Cline, Roo Code, Windsurf, Claude Desktop)
+### Other MCP clients (Cline, Roo Code, Windsurf)
 
 Use the standard `mcpServers` map:
 
@@ -86,7 +86,7 @@ Use the standard `mcpServers` map:
 }
 ```
 
-For a stdio-only client, bridge with `npx -y mcp-remote https://mcp.ophis.fi/mcp`. See [DISTRIBUTION.md](DISTRIBUTION.md) for the full per-ecosystem matrix.
+For a stdio-only client like Claude Desktop, bridge with `npx -y mcp-remote https://mcp.ophis.fi/mcp`. See [DISTRIBUTION.md](DISTRIBUTION.md) for the full per-ecosystem matrix.
 
 ## Plugins
 

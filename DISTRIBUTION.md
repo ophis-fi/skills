@@ -22,7 +22,7 @@ The MCP Registry entry is the canonical source feed. Downstream MCP catalogs tha
 | Cursor | Deeplink or `mcp.json` | Add to Cursor button below |
 | VS Code / Copilot | Badge or `.vscode/mcp.json` | Install in VS Code button below |
 | Codex | `~/.codex/config.toml` | `[mcp_servers.ophis]` table below |
-| Cline / Roo Code | `cline_mcp_settings.json` | `mcpServers` map below, plus `llms-install.md` |
+| Cline / Roo Code | `cline_mcp_settings.json` (Cline), `mcp_settings.json` (Roo) | `mcpServers` map below, plus `llms-install.md` |
 | Windsurf | `mcp_config.json` | `mcpServers` map below |
 | Claude Desktop | `claude_desktop_config.json` via mcp-remote | `mcp-remote` bridge below |
 
