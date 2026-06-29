@@ -19,7 +19,7 @@ The MCP Registry entry is the canonical source feed. Downstream MCP catalogs tha
 | --- | --- | --- |
 | Claude Code | Plugin (MCP + skill) | `/plugin marketplace add ophis-fi/skills` then `/plugin install ophis@ophis-fi` |
 | Claude Code | MCP only | `claude mcp add --transport http ophis https://mcp.ophis.fi/mcp` |
-| Cursor | Deeplink or `mcp.json` | Add to Cursor button below |
+| Cursor | `mcp.json` | mcp.json config below |
 | VS Code / Copilot | Badge or `.vscode/mcp.json` | Install in VS Code button below |
 | Codex | `~/.codex/config.toml` | `[mcp_servers.ophis]` table below |
 | Cline / Roo Code | `cline_mcp_settings.json` (Cline), `mcp_settings.json` (Roo) | `mcpServers` map below, plus `llms-install.md` |
@@ -37,9 +37,7 @@ The plugin is the only path that also installs the `ophis-swap` skill. Every oth
 
 ### Cursor
 
-[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=ophis&config=eyJ1cmwiOiJodHRwczovL21jcC5vcGhpcy5maS9tY3AifQ==)
-
-Manual, `~/.cursor/mcp.json` or `.cursor/mcp.json`:
+Add to `~/.cursor/mcp.json` or `.cursor/mcp.json`:
 
 ```json
 {

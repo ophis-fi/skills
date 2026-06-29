@@ -30,9 +30,7 @@ The Ophis MCP server is remote, HTTP, and keyless, so the same endpoint works in
 
 ### Cursor
 
-[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](cursor://anysphere.cursor-deeplink/mcp/install?name=ophis&config=eyJ1cmwiOiJodHRwczovL21jcC5vcGhpcy5maS9tY3AifQ==)
-
-Or add to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (per project):
+Add to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (per project):
 
 ```json
 {

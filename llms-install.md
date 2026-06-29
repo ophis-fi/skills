@@ -14,7 +14,7 @@ To actually place a trade later, the agent needs an EVM wallet it controls (an a
 
 ### 1. Add the server to the MCP settings file
 
-Add the following entry to the host's MCP settings file. Use the path for your client:
+Add the following entry to the host's MCP settings file. Use the path for your client (the paths below are for macOS; on Linux or Windows, use your client's equivalent MCP settings location):
 
 - Cline (VS Code extension): `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json`
 - Roo Code (VS Code extension): `~/Library/Application Support/Code/User/globalStorage/rooveterinaryinc.roo-cline/settings/mcp_settings.json`
