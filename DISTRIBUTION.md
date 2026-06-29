@@ -53,7 +53,7 @@ Manual, `~/.cursor/mcp.json` or `.cursor/mcp.json`:
 
 ### VS Code / GitHub Copilot
 
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=ophis&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fmcp.ophis.fi%2Fmcp%22%7D)
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=ophis&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fmcp.ophis.fi%2Fmcp%22%7D)
 
 Manual, `.vscode/mcp.json` (top-level `servers` key):
 
