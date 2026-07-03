@@ -18,8 +18,8 @@
         "path": "./plugins/ophis"
       },
       "policy": {
-        "installation": "local",
-        "authentication": "none"
+        "installation": "AVAILABLE",
+        "authentication": "ON_FIRST_USE"
       }
     }
   ]
