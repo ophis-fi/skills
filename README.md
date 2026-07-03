@@ -4,8 +4,9 @@
 [![GitHub stars](https://img.shields.io/github/stars/ophis-fi/skills?style=flat-square)](https://github.com/ophis-fi/skills/stargazers)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-fi.ophis%2Fmcp-1f6feb?style=flat-square)](https://registry.modelcontextprotocol.io/v0/servers?search=ophis)
 [![Claude Code plugin](https://img.shields.io/badge/Claude_Code-ophis%40ophis--fi-d97757?style=flat-square)](https://github.com/ophis-fi/skills)
+[![HOL trust score](https://hol.org/api/registry/badges/plugin?slug=ophis%2Fophis&metric=trust)](https://hol.org/registry/plugins/ophis%2Fophis)
 
-Official [Ophis](https://ophis.fi) plugin marketplace for Claude Code. Ophis is an intent-based DEX built on CoW Protocol: MEV-protected, gasless for the trader, keyless, and non-custodial. Trading is live on 11 EVM chains.
+Official [Ophis](https://ophis.fi) plugin marketplace for Claude Code. Ophis is an intent-based DEX built on CoW Protocol: MEV-protected, gasless for the trader, keyless, and non-custodial. Trading is live on 12 EVM chains.
 
 > Not to be confused with [njayp/ophis](https://github.com/njayp/ophis), an unrelated Go library for MCP. This is Ophis the DEX at [ophis.fi](https://ophis.fi).
 

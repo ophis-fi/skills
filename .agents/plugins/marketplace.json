@@ -1,0 +1,26 @@
+{
+  "name": "ophis-fi",
+  "owner": {
+    "name": "Ophis",
+    "email": "contact@ophis.fi",
+    "url": "https://ophis.fi"
+  },
+  "metadata": {
+    "version": "0.1.0",
+    "description": "Official Ophis plugins for AI coding agents."
+  },
+  "plugins": [
+    {
+      "name": "ophis",
+      "category": "Tools & Integrations",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ophis"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      }
+    }
+  ]
+}
