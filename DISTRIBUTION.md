@@ -120,7 +120,7 @@ Claude Desktop expects a stdio command, so bridge the remote server with `mcp-re
 
 ## Supported chains
 
-Trading is live on Ethereum (1), Optimism (10), BNB Chain (56), Gnosis (100), Polygon (137), Base (8453), Arbitrum (42161), Avalanche (43114), Plasma (9745), Ink (57073), and Linea (59144). `list_chains` reports the authoritative live set at runtime.
+Trading is live on Ethereum (1), Optimism (10), BNB Chain (56), Gnosis (100), Unichain (130), Polygon (137), Base (8453), Arbitrum (42161), Avalanche (43114), Plasma (9745), Ink (57073), and Linea (59144). `list_chains` reports the authoritative live set at runtime.
 
 ## Links
 

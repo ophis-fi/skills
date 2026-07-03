@@ -83,7 +83,7 @@ The flow is non-custodial: `build_order` returns an unsigned order, the agent si
 ## Verify the installation
 
 1. Restart the client so it loads the new server.
-2. Ask the agent to call `list_chains`. A successful call returns the tradeable chain set (Ethereum, Optimism, BNB Chain, Gnosis, Polygon, Base, Arbitrum, Avalanche, Plasma, Ink, Linea), which confirms the server is connected. No key is required, so this should succeed immediately.
+2. Ask the agent to call `list_chains`. A successful call returns the tradeable chain set (Ethereum, Optimism, BNB Chain, Gnosis, Unichain, Polygon, Base, Arbitrum, Avalanche, Plasma, Ink, Linea), which confirms the server is connected. No key is required, so this should succeed immediately.
 
 ## Troubleshooting
 
