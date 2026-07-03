@@ -18,10 +18,13 @@ jobs:
       - name: HOL Plugin Scanner
         uses: hashgraph-online/ai-plugin-scanner-action@6907377fe3d83dcd305ffd1e885b15911853467b # v1.2.372
         with:
-          plugin_dir: "plugins/ophis"
+          # Scan at the repo root (repository mode) so CI exercises the
+          # .agents/plugins/marketplace.json discovery path, which is how the
+          # HOL registry scans this repo. A broken marketplace manifest then
+          # fails CI instead of passing a plugin-dir-only scan.
+          plugin_dir: "."
           mode: scan
           min_score: 80
           fail_on_severity: high
           format: sarif
           upload_sarif: true
-          registry_payload_output: ai-plugin-registry-payload.json
