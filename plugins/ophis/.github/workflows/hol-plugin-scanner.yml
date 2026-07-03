@@ -1,3 +1,8 @@
+# Scanner-visibility mirror of the repo-root HOL plugin scanner workflow.
+# GitHub only discovers workflows under the repository-root .github/workflows,
+# so this nested copy never executes as an Action. It exists so the HOL plugin
+# scanner, which resolves workflow files relative to the plugin dir
+# (plugins/ophis), can credit action pinning. Keep it in sync with the root.
 name: HOL Plugin Scanner
 
 on:
@@ -18,7 +23,7 @@ jobs:
       - name: HOL Plugin Scanner
         uses: hashgraph-online/ai-plugin-scanner-action@6907377fe3d83dcd305ffd1e885b15911853467b # v1.2.372
         with:
-          plugin_dir: "plugins/ophis"
+          plugin_dir: "."
           mode: scan
           min_score: 80
           fail_on_severity: high
