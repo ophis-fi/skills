@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: HOL Plugin Scanner
-        uses: hashgraph-online/ai-plugin-scanner-action@6907377fe3d83dcd305ffd1e885b15911853467b # v1.2.372
+        uses: hashgraph-online/ai-plugin-scanner-action@f4215108df207a0ed473b1ee34963762bb220b9d # v1.2.465
         with:
           # Scan at the repo root (repository mode) so CI exercises the
           # .agents/plugins/marketplace.json discovery path, which is how the
