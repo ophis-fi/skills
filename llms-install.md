@@ -64,7 +64,7 @@ If the host is Claude Code, install the plugin instead, which adds both the MCP 
 
 ## Available tools
 
-After installation the agent has 12 tools:
+After installation the agent has 14 tools:
 
 - `parse_intent`: turn plain English ("swap 100 USDC for ETH on Base") into sell token, buy token, amount, and chain.
 - `resolve_token`: map a symbol to its canonical address. Fails closed, so a spoofed token with a familiar symbol is not returned.
@@ -72,8 +72,10 @@ After installation the agent has 12 tools:
 - `get_quote`: a best-execution quote for a sell or buy.
 - `expected_surplus`: compares an Ophis quote against a public aggregator and returns the difference in basis points.
 - `build_order`: returns an unsigned, bounded order plus the EIP-712 typed data to sign.
+- `validate_order`: offline preflight for an order built outside `build_order`; catches wrong orderbook host, wrong EIP-712 domain, appData hash mismatch, unpinned receiver, and similar silent failures before signing. Read-only.
 - `submit_order`: relays a signed order to the orderbook. This is the only state-changing tool.
 - `lookup_tier`: a wallet's fee-rebate tier and rebate percentage.
+- `get_integrator_earnings`: an integrator's routed volume, fees charged, and referral rebate paid to date, looked up by appCode. Read-only.
 - `get_balances`, `get_portfolio`: native and ERC-20 balances on one chain or across chains.
 - `get_gas`: current gas price (informational; trades are gasless for the trader).
 - `get_token_chart`: OHLCV price history.

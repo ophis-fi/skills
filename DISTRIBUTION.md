@@ -10,8 +10,11 @@ How to install Ophis across agent ecosystems, and where it is listed. Ophis is a
 | --- | --- | --- |
 | Claude Code plugin marketplace | `ophis@ophis-fi` (marketplace `ophis-fi`) | this repo, github.com/ophis-fi/skills |
 | Official MCP Registry | `fi.ophis/mcp` (namespace `fi.ophis`, DNS-verified to ophis.fi) | https://registry.modelcontextprotocol.io/v0/servers?search=ophis |
+| Hosted agent-skills (well-known) | `ophis` skill family + legacy `swap-via-ophis` | https://ophis.fi/.well-known/agent-skills/index.json |
+| goose extensions directory | Ophis tutorial page | https://goose-docs.ai/docs/mcp/ophis-mcp/ |
+| skills.ws | `ophis-swap` | https://skills.ws/skills/ophis-swap/ |
 
-The MCP Registry entry is the canonical source feed. Downstream MCP catalogs that mirror the registry pick it up from there. The plugin marketplace is this GitHub repository, added directly by name.
+The MCP Registry entry is the canonical source feed. Downstream MCP catalogs that mirror the registry pick it up from there (Glama also indexes the GitHub repo directly). The plugin marketplace is this GitHub repository, added directly by name.
 
 ## Install matrix
 
@@ -33,7 +36,7 @@ The MCP Registry entry is the canonical source feed. Downstream MCP catalogs tha
 /plugin install ophis@ophis-fi
 ```
 
-The plugin is the only path that also installs the `ophis-swap` skill. Every other client below installs the MCP server alone, which gives the agent the 12 tools but not the workflow guidance.
+The plugin is the only path that also installs the `ophis-swap` skill. Every other client below installs the MCP server alone, which gives the agent the 14 tools but not the workflow guidance.
 
 ### Cursor
 
@@ -116,7 +119,7 @@ Claude Desktop expects a stdio command, so bridge the remote server with `mcp-re
 
 ## What you get
 
-12 tools: `parse_intent`, `resolve_token`, `list_chains`, `get_quote`, `expected_surplus`, `build_order`, `submit_order`, `lookup_tier`, `get_balances`, `get_portfolio`, `get_gas`, `get_token_chart`. `submit_order` is the only state-changing tool; everything else reads or builds. `resolve_token` maps a symbol to its canonical address and fails closed, so an agent never swaps into a token that merely spoofs a well-known symbol. No API key is required at any step.
+14 tools: `parse_intent`, `resolve_token`, `list_chains`, `get_quote`, `expected_surplus`, `build_order`, `validate_order`, `submit_order`, `lookup_tier`, `get_integrator_earnings`, `get_balances`, `get_portfolio`, `get_gas`, `get_token_chart`. `submit_order` is the only state-changing tool; everything else reads or builds. `resolve_token` maps a symbol to its canonical address and fails closed, so an agent never swaps into a token that merely spoofs a well-known symbol. No API key is required at any step.
 
 ## Supported chains
 
