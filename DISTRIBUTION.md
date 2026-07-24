@@ -10,8 +10,11 @@ How to install Ophis across agent ecosystems, and where it is listed. Ophis is a
 | --- | --- | --- |
 | Claude Code plugin marketplace | `ophis@ophis-fi` (marketplace `ophis-fi`) | this repo, github.com/ophis-fi/skills |
 | Official MCP Registry | `fi.ophis/mcp` (namespace `fi.ophis`, DNS-verified to ophis.fi) | https://registry.modelcontextprotocol.io/v0/servers?search=ophis |
+| Hosted agent-skills (well-known) | `ophis` skill family + legacy `swap-via-ophis` | https://ophis.fi/.well-known/agent-skills/index.json |
+| goose extensions directory | Ophis tutorial page | https://block.github.io/goose/docs/mcp/ophis-mcp |
+| skills.ws | `ophis-swap` | https://skills.ws/skills/ophis-swap/ |
 
-The MCP Registry entry is the canonical source feed. Downstream MCP catalogs that mirror the registry pick it up from there. The plugin marketplace is this GitHub repository, added directly by name.
+The MCP Registry entry is the canonical source feed. Downstream MCP catalogs that mirror the registry pick it up from there (Glama, PulseMCP, and similar aggregators also index the GitHub repo directly). The plugin marketplace is this GitHub repository, added directly by name.
 
 ## Install matrix
 

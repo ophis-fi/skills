@@ -25,6 +25,8 @@ You can also add the MCP server only, without the skill:
 claude mcp add --transport http ophis https://mcp.ophis.fi/mcp
 ```
 
+For agents with shell access (`curl`, `jq`, `cast`) there is also a hosted markdown skill family, no plugin install required: the index at [ophis.fi/.well-known/agent-skills/index.json](https://ophis.fi/.well-known/agent-skills/index.json) lists the `ophis` umbrella skill plus `ophis-quote`, `ophis-swap`, `ophis-order-status`, `ophis-cancel`, and `ophis-surplus-report`.
+
 ## Use the Ophis MCP server in other agents
 
 The Ophis MCP server is remote, HTTP, and keyless, so the same endpoint works in any MCP client. The `ophis-swap` skill is specific to Claude Code; the MCP tools are universal.
