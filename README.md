@@ -106,7 +106,7 @@ For a stdio-only client like Claude Desktop, bridge with `npx -y mcp-remote http
 
 Installing it wires up the Ophis MCP server (`https://mcp.ophis.fi/mcp`) and adds a skill that teaches the agent how to trade safely. The swap path is non-custodial: the server builds an unsigned order, the agent signs it with its own wallet, and the server relays the signed order. The receiver is always the signer.
 
-The 12 tools are `parse_intent`, `resolve_token`, `list_chains`, `get_quote`, `expected_surplus`, `build_order`, `submit_order`, `lookup_tier`, `get_balances`, `get_portfolio`, `get_gas`, and `get_token_chart`. `submit_order` is the only state-changing tool; `resolve_token` maps a symbol to its canonical address and fails closed, so an agent never swaps into a token that merely spoofs a well-known symbol.
+The 14 tools are `parse_intent`, `resolve_token`, `list_chains`, `get_quote`, `expected_surplus`, `build_order`, `validate_order`, `submit_order`, `lookup_tier`, `get_integrator_earnings`, `get_balances`, `get_portfolio`, `get_gas`, and `get_token_chart`. `submit_order` is the only state-changing tool; `resolve_token` maps a symbol to its canonical address and fails closed, so an agent never swaps into a token that merely spoofs a well-known symbol.
 
 See [`plugins/ophis/README.md`](plugins/ophis/README.md) for details.
 

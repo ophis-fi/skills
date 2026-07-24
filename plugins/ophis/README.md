@@ -4,7 +4,7 @@ Give your agent the ability to swap tokens onchain through [Ophis](https://ophis
 
 Installing this plugin does two things:
 
-1. Wires up the Ophis MCP server (`https://mcp.ophis.fi/mcp`) so the agent gets 12 tools to quote, build, and submit swaps and to read balances, prices, gas, and fee-rebate tiers.
+1. Wires up the Ophis MCP server (`https://mcp.ophis.fi/mcp`) so the agent gets 14 tools to quote, build, validate, and submit swaps and to read balances, prices, gas, and fee-rebate tiers.
 2. Adds the `ophis-swap` skill, which teaches the agent the correct, safe order of operations for a trade.
 
 ## Why an agent would use Ophis
